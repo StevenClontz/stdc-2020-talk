@@ -17,6 +17,33 @@
       <title>An Introductory <m>\omega</m>-length Game</title>
       <slide>
         <title>The Cantor Game</title>
+        <p>
+Let <m>W\subseteq\mathbb R</m>.
+Then <m>CG(W)</m> denotes the following game played by players <m>I</m>
+and <m>II</m>.
+        </p>
+        <p>
+During round <m>0</m>, <m>I</m> chooses some real number <m>a_0</m>,
+followed by <m>II</m> choosing <m>b_0</m> such that <m>a_0\lt b_0</m>.
+        </p>
+        <p>
+During round <m>n+1</m>, <m>I</m> chooses <m>a_{n+1}\in(a_n,b_n)</m>,
+followed by <m>II</m> choosing <m>b_{n+1}\in(a_{n+1},b_n)</m>.
+        </p>
+        <p>
+After <m>\omega</m>-many rounds, <m>I</m> wins this game in the case
+that <m>\lim_{n\to\infty}a_n\in W</m>.
+        </p>
+      </slide>
+      <slide>
+        <title>Strategies</title>
+        <p>
+I've yet to finish playing a single <m>\omega</m>-length game. :-(
+        </p>
+        <p>
+However, both players in such a game can define <em>strategies</em>
+that describe how they <em>would</em>...
+        </p>
       </slide>
       <slide>
         <title>A game-theoretic proof of a well-known result</title>
