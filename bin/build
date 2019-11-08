@@ -1,0 +1,1 @@
+xsltproc -stringparam theme night -o build/slides.html --xinclude ../pretext/xsl/pretext-revealjs.xsl slides.xml

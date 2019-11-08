@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext>
+  <slideshow>
+    <title>Limited Information Strategies in <m>\omega</m>-length games</title>
+    <frontmatter>
+      <titlepage>
+        <author>
+          <personname>Steven Clontz</personname>
+          <affiliation>University of South Alabama</affiliation>
+        </author>
+        <event>54th Spring Topology and Dynamics Conference</event>
+        <date>March 2020</date>
+      </titlepage>
+    </frontmatter>
+
+    <section>
+      <title>An Introductory <m>\omega</m>-length Game</title>
+      <slide>
+        <title>The Cantor Game</title>
+      </slide>
+      <slide>
+        <title>A game-theoretic proof of a well-known result</title>
+      </slide>
+    </section>
+
+    <section>
+      <title>Limited Information Strategies</title>
+      <slide>
+        <title>Definitions</title>
+      </slide>
+    </section>
+
+    <section>
+      <title>Selection Games</title>
+      <slide>
+        <title>Definition</title>
+      </slide>
+      <slide>
+        <title>Selection Principles</title>
+      </slide>
+    </section>
+
+    <section>
+      <title>Characterizing Topological Properites</title>
+      <slide>
+        <title>Covering Properties</title>
+      </slide>
+      <slide>
+        <title>Convergence</title>
+      </slide>
+      <slide>
+        <title><m>C_p</m>-theory</title>
+      </slide>
+    </section>
+
+    <section>
+      <title>Dual Selection Games</title>
+      <slide>
+        <title>The Point-Open Game</title>
+      </slide>
+      <slide>
+        <title>Duality</title>
+      </slide>
+      <slide>
+        <title>Reflections</title>
+      </slide>
+      <slide>
+        <title>Examples</title>
+      </slide>
+    </section>
+
+    <section>
+      <title>Arhangelskii's <m>\alpha</m>-principles</title>
+      <slide>
+        <title>Definitions</title>
+      </slide>
+      <slide>
+        <title><m>\alpha_2</m> and <m>G_1</m></title>
+      </slide>
+      <slide>
+        <title><m>\alpha_4</m> and <m>G_{fin}</m></title>
+      </slide>
+    </section>
+
+    <section>
+      <title>Selection Games vs. Principles</title>
+      <slide>
+        <title>Menger/Rothberger Games</title>
+      </slide>
+      <slide>
+        <title>Result from Duality</title>
+      </slide>
+      <slide>
+        <title><m>\Gamma</m>-like result</title>
+      </slide>
+    </section>
+
+    <section>
+      <title>Non-Selection Games</title>
+      <slide>
+        <title>Banach-Mazur Game</title>
+      </slide>
+      <slide>
+        <title>Proximal Game</title>
+      </slide>
+    </section>
+
+    <section>
+      <title>Questions?</title>
+    </section>
+
+  </slideshow>
+</pretext>
