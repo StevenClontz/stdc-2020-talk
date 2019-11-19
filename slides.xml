@@ -34,6 +34,12 @@ followed by <m>II</m> choosing <m>b_{n+1}\in(a_{n+1},b_n)</m>.
 After <m>\omega</m>-many rounds, <m>I</m> wins this game in the case
 that <m>\lim_{n\to\infty}a_n\in W</m>.
         </p>
+        <image source="img/500x250.png"/>
+        <p>
+(This game seems to be introduced by Grossman and Turett
+in the problems section of Mathematics Magazine Vol. 71,
+with some further analysis done by Matt Baker in a later volume.)
+        </p>
       </slide>
       <slide>
         <title>Strategies</title>
