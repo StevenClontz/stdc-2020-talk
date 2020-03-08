@@ -24,7 +24,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 <publication>
 
     <revealjs>
-        <appearance theme="solarized"/>
+        <appearance theme="simple"/>
         <!-- these are "resources" defaults, but best for a sample -->
         <!-- @minified is not even necessary with @host = 'cdn'    -->
         <resources host="cdn" minified="yes"/>
