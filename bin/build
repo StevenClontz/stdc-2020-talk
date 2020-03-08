@@ -1,1 +1,6 @@
-xsltproc -stringparam theme night -o index.html --xinclude ../pretext/xsl/pretext-revealjs.xsl slides.xml
+for file in img/*.pdf
+do
+  echo "Building ${file}"
+  convert -density 1600 $file ${file::-4}.png
+done
+xsltproc -o index.html --xinclude ../pretext/xsl/pretext-revealjs.xsl slides.xml

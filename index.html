@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-20T16:26:42-06:00    *-->
+<!--*    on 2020-03-08T21:53:15Z    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -56,14 +56,12 @@ ul {
 <tr><th align="center" style="border-bottom: 0px;">Steven Clontz</th></tr>
 <tr><td align="center" style="border-bottom: 0px;">University of South Alabama</td></tr>
 <tr><td align="center"></td></tr>
-</table></section><section><h3>
-            Abstract
-          </h3>
-<div>
+</table></section><section><h3>Abstract</h3>
+<div align="left">
 <p>Several ideas from topology and set theory may be characterized by considering two-player infinite-length games. During each round \(n\in\omega=\{0,1,2,\dots\}\text{,}\) suppose Player 1 makes a move \(a_n\) (perhaps choosing an open cover of a given regular space), followed by Player 2 making a move \(b_n\) (perhaps choosing a finite subcollection from 1's chosen cover); the winner of such a game is determined by the sequence of moves \(a_0,b_0,a_1,b_1,\dots\) (perhaps Player 2 wins if their choices form a cover).</p>
 <p>The topological game specified above is known as Menger's game, and Player 2 has an unbeatable strategy that only uses information limited to the round number and the most recent move of Player 1 in this game if and only if the given regular space is \(\sigma\)-compact. In this talk, we will explore various results of this flavor found in the literature, including an interesting game-theoretic proof appropriate for undergraduates that the real numbers are uncountable.</p>
 </div></section></section><section><section><h1>An Introductory \(\omega\)-length Game</h1></section><section><h3>The Cantor Game</h3>
-<div align="left"> <p>Let \(W\subseteq\mathbb R\text{.}\) Then \(CG(W)\) denotes the following game played by players \(I\) and \(II\text{.}\)</p> <p>During round \(0\text{,}\) \(I\) chooses some real number \(a_0\text{,}\) followed by \(II\) choosing \(b_0\) such that \(a_0\lt b_0\text{.}\)</p> <p>During round \(n+1\text{,}\) \(I\) chooses \(a_{n+1}\in(a_n,b_n)\text{,}\) followed by \(II\) choosing \(b_{n+1}\in(a_{n+1},b_n)\text{.}\)</p> <p>After \(\omega\)-many rounds, \(I\) wins this game in the case that \(\lim_{n\to\infty}a_n\in W\text{.}\)</p> <img src="img/500x250.png"> <p>(This game seems to be introduced by Grossman and Turett in the problems section of Mathematics Magazine Vol. 71, with some further analysis done by Matt Baker in a later volume.)</p>
+<div align="left"> <p>Let \(W\subseteq\mathbb R\text{.}\) Then \(CG(W)\) denotes the following game played by players \(I\) and \(II\text{.}\)</p> <p>During round \(0\text{,}\) \(I\) chooses some real number \(a_0\text{,}\) followed by \(II\) choosing \(b_0\) such that \(a_0\lt b_0\text{.}\)</p> <p>During round \(n+1\text{,}\) \(I\) chooses \(a_{n+1}\in(a_n,b_n)\text{,}\) followed by \(II\) choosing \(b_{n+1}\in(a_{n+1},b_n)\text{.}\)</p> <p>After \(\omega\)-many rounds, \(I\) wins this game in the case that \(\displaystyle\lim_{n\to\infty}a_n\in W\text{.}\)</p> <img src="img/cg.png"> <p>(This game seems to be introduced by Grossman and Turett in the problems section of Mathematics Magazine Vol. 71, with some further analysis done by Matt Baker in a later volume.)</p>
 </div></section><section><h3>Strategies</h3>
 <div align="left"> <p>I've yet to finish playing a single \(\omega\)-length game. :-(</p> <p>However, both players in such a game can define <em class="emphasis">strategies</em> that describe how they <em class="emphasis">would</em>...</p>
 </div></section><section><h3>A game-theoretic proof of a well-known result</h3>
