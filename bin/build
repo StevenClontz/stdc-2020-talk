@@ -1,8 +1,10 @@
-for file in img/*.tex
+(
+cd img
+for file in *.tex
 do
   echo "Building ${file} to image"
   pdflatex --interaction=batchmode $file
   convert -density 1600 ${file::-4}.pdf ${file::-4}.png
 done
-echo "Building slides to HTML"
-xsltproc -stringparam publisher publication.xml -o index.html --xinclude ../pretext/xsl/pretext-revealjs.xsl slides.xml
+)
+bin/quickbuild

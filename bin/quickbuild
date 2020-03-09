@@ -1,0 +1,2 @@
+echo "Building slides to HTML"
+xsltproc -stringparam publisher publication.xml -o index.html --xinclude ../pretext/xsl/pretext-revealjs.xsl slides.xml

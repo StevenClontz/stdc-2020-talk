@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pretext>
+  <docinfo>
+    <macros>
+      \newcommand{\win}{\uparrow}
+    </macros>
+  </docinfo>
   <slideshow>
     <title>Limited Information Strategies in <m>\omega</m>-length games</title>
     <frontmatter>
@@ -39,7 +44,8 @@ During round <m>n+1</m>, <m>I</m> chooses <m>a_{n+1}\in(a_n,b_n)</m>,
 followed by <m>II</m> choosing <m>b_{n+1}\in(a_{n+1},b_n)</m>.
         </p>
         <p>
-After <m>\omega</m>-many rounds, <m>I</m> wins this game in the case
+After <m>\omega=\{0,1,2,\dots\}</m>-many rounds,
+<m>I</m> wins this game in the case
 that <m>\displaystyle\lim_{n\to\infty}a_n\in W</m>.
         </p>
         <image source="img/cg.png"/>
@@ -52,15 +58,77 @@ with some further analysis done by Matt Baker in a later volume.)
       <slide>
         <title>Strategies</title>
         <p>
-I've yet to finish playing a single <m>\omega</m>-length game. :-(
+It'd take some time to complete this kind of
+<term><m>\omega</m>-length game</term>.
         </p>
         <p>
-However, both players in such a game can define <term>strategies</term>
-that describe how they <term>would</term>...
+However, each player in such a game can define a <term>strategy</term>
+<m>\sigma:M^{\lt\omega}\to M</m>
+that designates their moves in response to their opponent's actions...
+        </p>
+        <me>
+\underbrace{\sigma}_{\text{player strategy}} :
+\underbrace{M^{\lt\omega}}_{\text{finite sequence of opponent's moves}} \to
+\underbrace{M}_{\text{player's next move}}
+        </me>
+        <p>
+Typically, we want to prove something about the existence of
+<term>winning strategies</term> that defeat any counter-strategy chosen
+by the opponent.
+        </p>
+        <p>
+If player <m>P</m> has a winning strategy for game <m>G</m>,
+we write <m>P\win G</m>.
         </p>
       </slide>
       <slide>
         <title>A game-theoretic proof of a well-known result</title>
+        <proposition>
+          <statement>
+            <p>
+<m>I\win CG(\mathbb R)</m>.
+            </p>
+          </statement>
+          <proof><me>\lim_{n\to\infty}a_n\in\mathbb R</me></proof>
+        </proposition>
+        <theorem>
+          <statement>
+            <p>
+If <m>W</m> is countable, then <m>II\win CG(W)</m>. 
+            </p>
+          </statement>
+        </theorem>
+        <corollary>
+          <statement>
+            <p>
+<m>\mathbb R</m> is uncountable.
+            </p>
+          </statement>
+        </corollary>
+      </slide>
+      <slide>
+        <title>Proof of the theorem</title>
+        <theorem>
+          <statement>
+            <p>
+If <m>W</m> is countable, then <m>II\win CG(W)</m>. 
+            </p>
+          </statement>
+        </theorem>
+            <p>
+Let <m>W=\{w_n:n\in\omega\}</m>. Then if any element of
+<m>W</m> is legal to play during Player <m>II</m>'s turn,
+their strategy is to play <m>w_n</m>, where <m>n</m> is
+the minimal ordinal such that <m>w_n</m> is legal to play.
+Otherwise, Player <m>II</m> chooses arbitrarily.
+            </p>
+            <image source="img/cgproof.png"/>
+            <p>
+At the end of the game, each element <m>w_N\in W</m> was either played
+before round <m>N</m>, or was illegal to be played in round <m>N</m>.
+Either way, <m>w_N\not=\lim_{n\to\infty} a_n</m>,
+so Player <m>II</m>'s strategy is winning.
+            </p>
       </slide>
     </section>
 
