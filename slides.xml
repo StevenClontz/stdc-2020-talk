@@ -3,26 +3,33 @@
   <docinfo>
     <macros>
       \newcommand{\win}{\uparrow}
+      \newcommand{\mc}{\mathcal}
+      \newcommand{\markwin}{\win_{mark}}
+      \newcommand{\prewin}{\win_{pre}}
     </macros>
   </docinfo>
   <slideshow>
-    <title>Limited Information Strategies in <m>\omega</m>-length games</title>
+    <title>Games Topologists Play</title>
     <frontmatter>
       <titlepage>
         <author>
           <personname>Steven Clontz</personname>
           <affiliation>University of South Alabama</affiliation>
         </author>
-        <event>54th Spring Topology and Dynamics Conference</event>
-        <date>2020 March</date>
       </titlepage>
+      <event><delete>54th Spring Topology and Dynamics Conference</delete>
+      Talk Math With Your Friends!</event>
+      <date>2020 March</date>
       <abstract>
         <p>
+Many topological properties may be characterized in terms of who can guarantee victory (and how much memory they require) in certain two-player, infinite-length games. To illustrate this, we will explore a novel game-theoretic proof of the uncountability of the real numbers, and then discuss the class of "selection games" used throughout general topology.
+        </p>
+<!--        <p>
 Several ideas from topology and set theory may be characterized by considering two-player infinite-length games. During each round <m>n\in\omega=\{0,1,2,\dots\}</m>, suppose Player 1 makes a move <m>a_n</m> (perhaps choosing an open cover of a given regular space), followed by Player 2 making a move <m>b_n</m> (perhaps choosing a finite subcollection from 1's chosen cover); the winner of such a game is determined by the sequence of moves <m>a_0,b_0,a_1,b_1,\dots</m> (perhaps Player 2 wins if their choices form a cover).
         </p>
         <p>
 The topological game specified above is known as Menger's game, and Player 2 has an unbeatable strategy that only uses information limited to the round number and the most recent move of Player 1 in this game if and only if the given regular space is <m>\sigma</m>-compact. In this talk, we will explore various results of this flavor found in the literature, including an interesting game-theoretic proof appropriate for undergraduates that the real numbers are uncountable.
-        </p>
+        </p>-->
       </abstract>
     </frontmatter>
 
@@ -32,20 +39,20 @@ The topological game specified above is known as Menger's game, and Player 2 has
         <title>The Cantor Game</title>
         <p>
 Let <m>W\subseteq\mathbb R</m>.
-Then <m>CG(W)</m> denotes the following game played by players <m>I</m>
-and <m>II</m>.
+Then <m>CG(W)</m> denotes the following game played by players <m>P1</m>
+and <m>P2</m>.
         </p>
         <p>
-During round <m>0</m>, <m>I</m> chooses some real number <m>a_0</m>,
-followed by <m>II</m> choosing <m>b_0</m> such that <m>a_0\lt b_0</m>.
+During round <m>0</m>, <m>P1</m> chooses some real number <m>a_0</m>,
+followed by <m>P2</m> choosing <m>b_0</m> such that <m>a_0\lt b_0</m>.
         </p>
         <p>
-During round <m>n+1</m>, <m>I</m> chooses <m>a_{n+1}\in(a_n,b_n)</m>,
-followed by <m>II</m> choosing <m>b_{n+1}\in(a_{n+1},b_n)</m>.
+During round <m>n+1</m>, <m>P1</m> chooses <m>a_{n+1}\in(a_n,b_n)</m>,
+followed by <m>P2</m> choosing <m>b_{n+1}\in(a_{n+1},b_n)</m>.
         </p>
         <p>
 After <m>\omega=\{0,1,2,\dots\}</m>-many rounds,
-<m>I</m> wins this game in the case
+<m>P1</m> wins this game in the case
 that <m>\displaystyle\lim_{n\to\infty}a_n\in W</m>.
         </p>
         <image source="img/cg.png"/>
@@ -86,15 +93,22 @@ we write <m>P\win G</m>.
         <proposition>
           <statement>
             <p>
-<m>I\win CG(\mathbb R)</m>.
+<m>P1\win CG(\mathbb R)</m>.
             </p>
           </statement>
-          <proof><me>\lim_{n\to\infty}a_n\in\mathbb R</me></proof>
         </proposition>
+<!--          <p>
+            Cal 2 Proof: For any bounded monotonic sequence,
+            <me>\lim_{n\to\infty}a_n\in\mathbb R</me>.
+          </p>
+          <p>
+            (In fact, <m>P1\win CG(P)</m> for any "perfect"
+            subset of <m>\mathbb R</m>.)
+          </p>-->
         <theorem>
           <statement>
             <p>
-If <m>W</m> is countable, then <m>II\win CG(W)</m>. 
+If <m>W</m> is countable, then <m>P2\win CG(W)</m>. 
             </p>
           </statement>
         </theorem>
@@ -111,31 +125,24 @@ If <m>W</m> is countable, then <m>II\win CG(W)</m>.
         <theorem>
           <statement>
             <p>
-If <m>W</m> is countable, then <m>II\win CG(W)</m>. 
+If <m>W</m> is countable, then <m>P2\win CG(W)</m>. 
             </p>
           </statement>
         </theorem>
             <p>
 Let <m>W=\{w_n:n\in\omega\}</m>. Then if any element of
-<m>W</m> is legal to play during Player <m>II</m>'s turn,
+<m>W</m> is legal to play during <m>P2</m>'s turn,
 their strategy is to play <m>w_n</m>, where <m>n</m> is
 the minimal ordinal such that <m>w_n</m> is legal to play.
-Otherwise, Player <m>II</m> chooses arbitrarily.
+Otherwise, <m>P2</m> chooses arbitrarily.
             </p>
             <image source="img/cgproof.png"/>
             <p>
 At the end of the game, each element <m>w_N\in W</m> was either played
 before round <m>N</m>, or was illegal to be played in round <m>N</m>.
 Either way, <m>w_N\not=\lim_{n\to\infty} a_n</m>,
-so Player <m>II</m>'s strategy is winning.
+so <m>P2</m>'s strategy is winning.
             </p>
-      </slide>
-    </section>
-
-    <section>
-      <title>Limited Information Strategies</title>
-      <slide>
-        <title>Definitions</title>
       </slide>
     </section>
 
@@ -143,22 +150,81 @@ so Player <m>II</m>'s strategy is winning.
       <title>Selection Games</title>
       <slide>
         <title>Definition</title>
+        <p>
+          Given two sets <m>\mc A,\mc B</m>, the selection game <m>G_1(\mc A,\mc B)</m>
+          is played as follows:
+        </p>
+        <image source="/img/sg.png"/>
+        <p>
+          <m>P2</m> wins this game provided <m>\{b_n:n\lt\omega\}\in\mc B</m>.
+        </p>
+        <p>
+          <m>G_{fin}(\mc A,\mc B)</m> is similar, except <m>P2</m> can make
+          finitely-many selections each round.
+        </p>
       </slide>
       <slide>
-        <title>Selection Principles</title>
+        <title>Topological Examples</title>
+        <p>Let <m>X</m> be some topological space with a particular point <m>x</m>.</p>
+        <ul>
+          <li>
+            <m>G_*(\mc O,\mc O)</m>:
+            P1 chooses open covers of <m>X</m>,
+            P2 tries to build their own open cover.
+          </li>
+          <li>
+            <m>G_*(\mc D,\Gamma_x)</m>:
+            P1 chooses dense subsets of <m>X</m>,
+            P2 tries to build a sequence converging to <m>x</m>.
+          </li>
+        </ul>
       </slide>
-    </section>
-
-    <section>
-      <title>Characterizing Topological Properites</title>
       <slide>
-        <title>Covering Properties</title>
+        <title>Limited Information</title>
+        <p>
+          A strategy that can ignore all but the most recent move of the opponent
+          (but might use the current round #) is said to be Markov.
+        </p>
+        <p>
+          A strategy that can ignore all moves of the opponent
+          (but probably uses the current round #) is said to be predetermined.
+        </p>
+        <p>
+          For <m>X=\mathbb R</m> with the usual topology:
+        </p>
+        <ul>
+          <li>
+            <m>P1\prewin G_1(\mc O,\mc O)</m>
+            but
+            <m>P2\markwin G_{fin}(\mc O,\mc O)</m>.
+          </li>
+          <li>
+            <m>P2\markwin G_1(\mc D,\Gamma_0)</m>
+            (so <m>P2\markwin G_{fin}(\mc D,\Gamma_0)</m> also).
+          </li>
+        </ul>
       </slide>
       <slide>
-        <title>Convergence</title>
-      </slide>
-      <slide>
-        <title><m>C_p</m>-theory</title>
+        <title>Spectrum of properties</title>
+        <image source="/img/spectrum.png"/>
+        <p>Notes:</p>
+        <ul>
+          <li>
+            For second-countable spaces,
+            <m>P2\markwin G_*(\mc O,\mc O)\Leftrightarrow P2\win G_*(\mc O,\mc O)</m>.
+          </li>
+          <li>
+            Using the Continuum Hypothesis and the Axiom of Choice, one may construct Lusin sets
+            <m>X\subseteq\mathbb R</m>. Any Lusin set satisfies both
+            <m>P1\not\win G_*(\mc O,\mc O)</m> and <m>P2\not\win G_*(\mc O,\mc O)</m>.
+          </li>
+          <li>
+            While <m>P1\win G_*(\mc O,\mc O)\Leftrightarrow P1\prewin G_*(\mc O,\mc O)</m>
+            (Galvin 1979, Pawlikowski 1994),
+            F. Jordan (2020) found a space where <m>P1\win G_1(\mc K,\mc O)</m> but
+            <m>P1\not\prewin G_1(\mc K,\mc O)</m>.
+          </li>
+        </ul>
       </slide>
     </section>
 
@@ -166,18 +232,79 @@ so Player <m>II</m>'s strategy is winning.
       <title>Dual Selection Games</title>
       <slide>
         <title>The Point-Open Game</title>
+        <p>
+          Let <m>\mc O</m> be the set of open covers, and <m>\mc P</m> be the set of
+          point-bases. Let <m>\neg</m> denote the complement of a set.
+        </p>
+        <p>
+          Then the point-open game <m>G_1(\mc P,\neg\mc O)</m> essentially has
+          <m>P1</m> choosing points, and <m>P2</m> selecting a neighborhood for each point. Then
+          <m>P1</m> wins if <m>P2</m>'s sets form a cover.
+        </p>
+        <p>
+          Compare with <m>G_1(\mc O,\mc O)</m>: <m>P1</m> chooses open covers,
+          <m>P2</m> selects an open set from the cover. Here <m>P2</m> wants to build
+          the open cover.
+         </p>
       </slide>
       <slide>
         <title>Duality</title>
+        <p>Galvin (1978) demonstrated the following:</p>
+        <ul>
+          <li><m>P1\win G_1(\mc O,\mc O)\Leftrightarrow P2\win G_1(\mc P,\neg\mc O)</m></li>
+          <li><m>P2\win G_1(\mc O,\mc O)\Leftrightarrow P1\win G_1(\mc P,\neg\mc O)</m></li>
+        </ul>
+        <p>The following also holds:</p>
+        <ul>
+          <li><m>P1\prewin G_1(\mc O,\mc O)\Leftrightarrow P2\markwin G_1(\mc P,\neg\mc O)</m></li>
+          <li><m>P2\markwin G_1(\mc O,\mc O)\Leftrightarrow P1\prewin G_1(\mc P,\neg\mc O)</m></li>
+        </ul>
+        <p>All together, we say that these games are dual.</p>
       </slide>
       <slide>
         <title>Reflections</title>
+        <p>It turns out that the key to this proof comes from a simple observation:</p>
+        <p>
+          <q>For each <m>x\in X</m>, pick any neighborhood <m>U_x</m>. Then <m>\{U_x:x\in X\}</m>
+          is an open cover.</q>
+        </p>
+        <p pause="yes">
+          Put another way:
+        </p>
+        <p pause="yes">
+          <q>For each <m>B_x\in\mc P</m>, pick any <m>U_x\in B_x</m>. Then <m>\{U_x:B_x\in\mc P\}\in\mc O</m>.</q>
+        </p>
+        <p pause="yes">
+          So let's say <m>\mc R</m> reflects* <m>\mc A</m> given the following:
+        </p>
+        <p pause="yes">
+          <q>For each <m>R\in\mc R</m>, pick any <m>b_R\in R</m>. Then <m>\{b_R:R\in \mc R\}\in\mc A</m>.</q> (*slight simplification)
+        </p>
       </slide>
       <slide>
-        <title>Examples</title>
+        <title>Another example</title>
+        <p>So <m>\mc P</m> refelcts <m>\mc O</m>, and <m>G_1(\mc O,\mc O)</m> and <m>G_1(\mc P,\neg\mc O)</m>
+        are dual.</p>
+        <p>
+           Likewise, let <m>\mc T</m> be the topology of a space, and choose a point from each open set.
+           That collection is a dense subspace, a member of <m>\mc D</m>.
+        </p>
+        <p>
+           What can we say about <m>G_1(\mc D,\Gamma_x)</m> and <m>G_1(\mc T,\neg\Gamma_x)</m>?
+        </p>
+        <p pause="yes">YES, they are dual!</p>
+      </slide>
+    </section>
+    <section><title>The Big Theorem</title>
+      <slide>
+        <title>The importance of reflection</title>
+        <p>If <m>\mc R</m> reflects <m>\mc A</m>, then <m>G_1(\mc A,\mc B)</m> and
+        <m>G_1(\mc R,\neg\mc B)</m> are dual.</p>
+        <image source="/img/spectrum2.png"/>
       </slide>
     </section>
 
+<!--
     <section>
       <title>Arhangelskii's <m>\alpha</m>-principles</title>
       <slide>
@@ -213,7 +340,7 @@ so Player <m>II</m>'s strategy is winning.
         <title>Proximal Game</title>
       </slide>
     </section>
-
+-->
     <section>
       <title>Questions?</title>
     </section>
